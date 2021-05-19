@@ -23,5 +23,10 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->post('addService', 'ServiceController@addService');
+    $router->get('getAllServices', 'ServiceController@getAllServices');
+    $router->get('getServiceById/{id}', 'ServiceController@getServiceById');
+    $router->post('updateService', 'ServiceController@updateService'); 
+    $router->get('deleteServiceById/{id}', 'ServiceController@deleteServiceById');
+    $router->post('getServicesWithFilter', 'ServiceController@getServicesWithFilter');
 
 });
